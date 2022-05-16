@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS usuario(
+  id SERIAL,
+  name VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS tienda(
+  id SERIAL,
+  name VARCHAR(100) NOT NULL,
+  information VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS producto(
+  id SERIAL,
+  name VARCHAR(100) NOT NULL,
+  information VARCHAR(100) NOT NULL,
+  tienda_id INT NOT NULL
+  PRIMARY KEY (id)
+  FOREIGN KEY (tienda_id) references
+);
+
+CREATE TABLE IF NOT EXISTS promocion(
+  id SERIAL,
+  name VARCHAR(100) NOT NULL,
+  information VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+);
