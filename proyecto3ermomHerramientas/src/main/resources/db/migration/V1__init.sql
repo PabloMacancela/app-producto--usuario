@@ -35,6 +35,15 @@ CREATE TABLE IF NOT EXISTS producto(
   FOREIGN KEY (representante_id) references representante(id)
   );
 
+CREATE TABLE IF NOT EXISTS futbol(
+    id SERIAL,
+    name VARCHAR (100) NOT NULL,
+    hora VARCHAR (100) NOT NULL,
+    cancha VARCHAR (100) NOT NULL,
+
+    PRIMARY KEY (id)
+
+    );
 
 
 
